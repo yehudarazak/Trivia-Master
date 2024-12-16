@@ -2,7 +2,7 @@ import random
 import customtkinter as ctk
 from constants import *
 
-bin_of_questions = []
+answered_questions = []
 
 score = 0
 def new_question():
@@ -33,8 +33,8 @@ def check_answer(user_answer):
 
     if user_answer == answer:
         score += 1
-
-    bin_of_questions.append(question_and_answer)
+    # if question_and_answer not in bin_of_questions:
+    answered_questions.append(question_and_answer)
     delete_question(question_and_answer)
     show_qustions()
     
@@ -46,22 +46,24 @@ def answer_yes():
 def answer_no():
      check_answer("no")
 
-def play_again():
-    global score, bin_of_questions, QUESTIONS
-    score = 0
-    QUESTIONS = bin_of_questions
-    play_again_button.pack_forget()
-    yes_button.pack(side="right", padx=50, pady=10)
-    no_button.pack(side="left", padx=50, pady=10)
-    show_qustions()
+
 
 def end_game():
     global score
-    question_label.configure(text= f"Game Over!\n Your score: {score}/{len(bin_of_questions)}")
+    question_label.configure(text= f"Game Over!\n Your score: {score}/{len(answered_questions)}")
     yes_button.pack_forget()
     no_button.pack_forget()
     play_again_button.pack(pady=20)
 
+def play_again():
+    global score, QUESTIONS, answered_questions
+    score = 0
+    answered_questions = []
+    QUESTIONS = RAW_QUESTIONS.copy()
+    play_again_button.pack_forget()
+    yes_button.pack(side="right", padx=50, pady=10)
+    no_button.pack(side="left", padx=50, pady=10)
+    show_qustions()
 
 game_screen = ctk.CTk()
 game_screen.title("Trivia Master")
