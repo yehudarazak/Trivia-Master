@@ -19,6 +19,26 @@ RAW_QUESTIONS = [
   {"question": "Is the capital of Australia Sydney?", "answer": "no"},
   {"question": "Are polar bears left-handed?", "answer": "no"},
   {"question": "Does an octopus have three hearts?", "answer": "yes"},
+  {"question": "Can humans survive without sleep for a week?", "answer": "no"},
+  {"question": "Do giraffes have the same number of neck bones as humans?", "answer": "yes"},
+  {"question": "Is the Amazon River the longest river in the world?", "answer": "no"},
+  {"question": "Are bananas berries?", "answer": "yes"},
+  {"question": "Can a human survive without water for a week?", "answer": "no"},
+  {"question": "Do bats always fly at night?", "answer": "no"},
+  {"question": "Is the Earth the center of the solar system?", "answer": "no"},
+  {"question":"Can humans live without a spleen?", "answer": "yes"},
+  {"question":"Do all fish live in saltwater?", "answer": "no"},
+  {"question":"Can a squid regenerate its limbs?", "answer": "yes"},
+  {"question":"Do flamingos sleep standing on one leg?", "answer": "yes"},
+  {"question":"Is the shortest war in history between Britain and Zanzibar?", "answer": "yes"},
+  {"question":"Do octopuses have blue blood?", "answer": "yes"},
+  {"question":"Is it possible to cry in space?", "answer": "yes"},
+  {"question":"Do trees communicate with each other?", "answer": "yes"},
+  {"question":"Can a person be allergic to water?", "answer": "yes"},
+  {"question":"Can a star explode more than once?", "answer": "yes"},
+  {"question":"Can you catch a cold by being outside in cold weather?", "answer": "no"},
+  {"question":"Is the Sahara the largest desert in the world?", "answer": "no"},
+  {"question": "Is the shortest month of the year always February?", "answer": "no"}
 ]
 
 QUESTIONS = RAW_QUESTIONS.copy()
